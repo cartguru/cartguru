@@ -1,0 +1,14 @@
+.Category {
+  aspect-ratio: 1;
+  border: 1px solid #ccc;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.Category__name {
+  text-transform: uppercase;
+}

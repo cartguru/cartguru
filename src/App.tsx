@@ -1,27 +1,27 @@
-import type { Component } from "solid-js";
+import { lazy, type Component } from "solid-js";
+import { Routes, Route, Navigate, A } from "@solidjs/router";
 
-import logo from "./logo.svg";
+const CategoriesPage = lazy(() => import("pages/Categories"));
+const CategoryPage = lazy(() => import("pages/Category"));
+
+import Link from "components/Link";
+
 import styles from "./App.module.css";
 
-const App: Component = () => {
-  return (
-    <div class={styles.App}>
-      <header class={styles.header}>
-        <img src={logo} class={styles.logo} alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          class={styles.link}
-          href="https://github.com/solidjs/solid"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Solid
-        </a>
-      </header>
-    </div>
-  );
-};
+import { CATEGORIES_PATH, CATEGORY_PATH, getHomePath } from "routes";
+
+const App: Component = () => (
+  <>
+    <Link to={getHomePath()}>
+      <h1 class={styles.App__title}>Cart Guru</h1>
+    </Link>
+
+    <Routes>
+      <Route path="/" element={<Navigate href={CATEGORIES_PATH} />} />
+      <Route path={CATEGORIES_PATH} component={CategoriesPage} />
+      <Route path={CATEGORY_PATH} component={CategoryPage} />
+    </Routes>
+  </>
+);
 
 export default App;

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Home",
+    "products": [
+      {
+        "name": "Item 1",
+        "targetUrl": "https://somewhere",
+        "imageUrl": "https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg"
+      },
+      {
+        "name": "Item 2",
+        "targetUrl": "https://somewhere",
+        "imageUrl": "https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg"
+      },
+      {
+        "name": "Item 3",
+        "targetUrl": "https://somewhere",
+        "imageUrl": "https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg"
+      }
+    ]
+  },
+  { "id": 2, "name": "Car", "products": [] },
+  { "id": 3, "name": "Kitchen", "products": [] },
+  { "id": 4, "name": "Pets", "products": [] }
+]

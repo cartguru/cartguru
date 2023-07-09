@@ -1,0 +1,17 @@
+.Grid {
+  display: grid;
+
+  /* X-Small devices (portrait phones, less than 576px) */
+  grid-template-columns: 1fr 1fr;
+
+  @media (min-width: 576px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  margin: 20px;
+  gap: 20px;
+}
